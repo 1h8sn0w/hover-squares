@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+StarNavi: Test task
+To successful passing of our test you should handle with following criterions:
+the app MUST work without errors
+presets for app mode you can fetch using this endpoint http://demo1030918.mockable.io/ or https://demo1030918.mockable.io/. This is should be request to the server NOT just copy paste of data.
+This data is array of objects with field:
+field - contain size of app field. Should be square form
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Work description:
+user set app mode
+press START
+if the user hovers on the square - he turns blue
+if the user hovers on the blue square - he turns white
+show hover squares
 
-## Available Scripts
+Requirements:
+Use React / Vue / Angular 2+
+The result of the work should be a link to the repository
 
-In the project directory, you can run:
+Example of design: https://starnavi-frontend-test-task-v3.netlify.app/static/media/image.09b1bfd4.png
+design example
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+StarNavi: Тестовое задание Для успешной сдачи нашего теста вы должны соответствовать следующим критериям: приложение ДОЛЖНО работать без ошибок пресеты для режима приложения, которые вы можете получить с помощью этой конечной точки http://demo1030918.mockable.io/ или https://demo1030918.mockable.io/. Это должен быть запрос к серверу, а НЕ просто копирование и вставка данных. Эти данные представляют собой массив объектов с полем: field - содержит размер поля приложения. Должен быть квадратной формы Описание Работы: пользовательский режим приложения нажмите старт если пользователь наводит курсор на квадрат - он становится синим если пользователь наводит курсор на синий квадрат - он становится белым показать наведенные квадраты Требования: Используйте React / Vue / Angular 2+ Результатом работы должна быть ссылка на репозиторий Пример оформления:
+Translated from: English (Google)
