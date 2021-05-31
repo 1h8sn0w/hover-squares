@@ -46,7 +46,6 @@ function Field({mode, alert}) {
             event.target.style.backgroundColor = 'white'
         }
         alert(cell)
-
     }
 
     return (
