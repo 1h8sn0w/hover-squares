@@ -1,53 +1,68 @@
-import {TableRow} from "@material-ui/core";
+import {Table, TableCell, TableHead, TableRow} from "@material-ui/core";
 import {makeStyles} from '@material-ui/core/styles'
-import {logDOM} from "@testing-library/react";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
     table: {
         borderCollapse: "collapse",
         tableLayout: 'fixed',
-        width: "auto"
+        width: 'auto',
+        margin: "auto"
     },
-    cell: {
-        border: 'solid 1px',
-        height: 10,
-        width: 10
+    td: {
+        border: 'solid 1px black',
+        overflow: "hidden"
+    },
+    tdHovered: {
+        border: 'solid 1px black',
+        overflow: "hidden",
+        backgroundColor: "white"
     }
-}))
+})
 
-function Field({mode}) {
+
+function Field({mode, alert}) {
     const classes = useStyles();
-    console.log(mode)
 
-    const createField = (field) => {
-        if (!field) {
-            return null
-        }
-        let arr = new Array(field)
-        for (let i = 0; i < field; i++) {
-            arr[i] = new Array(field)
-        }
+    if (!mode.field) {
+        return null
+    }
 
-        for (let i = 0; i < field; i++) {
-            for (let j = 0; j < field; j++) {
-                arr[i][j] = '<TableCell className={classes.cell}/>';
-            }
+    let arr = new Array(mode.field)
+
+    for (let i = 0; i < mode.field; i++) {
+        arr[i] = new Array(mode.field)
+    }
+
+    for (let i = 0; i < mode.field; i++) {
+        for (let j = 0; j < mode.field; j++) {
+            arr[i][j] = `row ${i + 1} cell ${j + 1}`;
         }
-        return arr
+    }
+
+    const onMouseEnterHandler = (event, cell) => {
+        if (event.target.style.backgroundColor === 'white') {
+            event.target.style.backgroundColor = 'lightblue'
+        } else {
+            event.target.style.backgroundColor = 'white'
+        }
+        alert(cell)
+
     }
 
     return (
-        <>
-            {
-                createField(mode.field)?.forEach(row => {
-                    return <TableRow>
-                        {row.forEach(cell => {
-                            return cell
+        <Table className={classes.table}>
+            <TableHead>
+                {arr.map(row => {
+                    return <TableRow key={Math.random()}>
+                        {row.map(cell => {
+                            return <TableCell className={classes.td} style={{backgroundColor: 'white'}}
+                                              key={Math.random()}
+                                              onMouseEnter={(event) => onMouseEnterHandler(event, cell)}/>
                         })}
                     </TableRow>
-                })
-            }
-        </>
+                })}
+            </TableHead>
+        </Table>
     )
 }
 

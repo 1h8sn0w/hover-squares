@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
     const classes = useStyles();
+    const [alerts, setAlerts] = useState([]);
     const [mode, setMode] = useState('');
 
     const handleChange = (event) => {
@@ -52,6 +53,7 @@ function App() {
                             <MenuItem value="" disabled>
                                 <em>Placeholder</em>
                             </MenuItem>
+                            {/*TODO: Fetch game mode data*/}
                             <MenuItem value={data.easyMode}>easyMode</MenuItem>
                             <MenuItem value={data.normalMode}>normalMode</MenuItem>
                             <MenuItem value={data.hardMode}>hardMode</MenuItem>
@@ -59,15 +61,20 @@ function App() {
                     </FormControl>
                     <Button variant="outlined" color="primary">START</Button>
                     <Box className={classes.cards}>
-                        <Field mode={mode}/>
+                        <Field mode={mode} alert={(message) => {
+                            setAlerts([message, ...alerts])
+                        }}/>
                     </Box>
-
                 </Grid>
                 <Grid item xs={12} sm={6} className={classes.infoContainer}>
                     <Typography variant='h4' className={classes.alert}>Hover squares</Typography>
-                    <Alert icon={false} severity="warning" className={classes.alert}>
-                        Test alert
-                    </Alert>
+                    {
+                        alerts?.map(alert => {
+                            return <Alert icon={false} severity="warning" className={classes.alert} key={Math.random()}>
+                                {alert}
+                            </Alert>
+                        })
+                    }
 
                 </Grid>
             </Grid>
