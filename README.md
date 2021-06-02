@@ -18,7 +18,8 @@ To successful passing of our test you should handle with following criterions:
 
 **Requirements:**
 
-Use React / Vue / Angular 2+
-The result of the work should be a link to the repository
+Use React / Vue / Angular 2+ The result of the work should be a link to the repository
 
 **Example of design:** ![Example](https://starnavi-frontend-test-task-v3.netlify.app/static/media/image.09b1bfd4.png)
+
+**Working DEMO** https://hover-squares.web.app/
